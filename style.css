@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #121212;
+  color: #fff;
+}
+
+.hidden { display: none; }
+.fade { opacity: 0; transition: opacity 0.5s; }
+.fade.show { opacity: 1; }
+
+.splash {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+  animation: fadeOut 2s 2s forwards;
+}
+
+.splash .logo {
+  font-size: 2em;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #0f0; }
+  to { text-shadow: 0 0 20px #0f0; }
+}
+
+@keyframes fadeOut {
+  to { opacity: 0; visibility: hidden; }
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 60px;
+  background: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.sidebar button {
+  margin: 0.5em 0;
+  padding: 0.5em;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: transform 0.2s;
+}
+
+.sidebar button:hover {
+  transform: scale(1.2);
+}
+
+.sidebar button.active {
+  background: #333;
+  border-radius: 4px;
+}
+
+.content {
+  flex: 1;
+  padding: 1em;
+  overflow-y: auto;
+}
+
+.player {
+  margin-top: 1em;
+  padding: 1em;
+  background: #1f1f1f;
+  border-radius: 8px;
+}
+
+.suggestions,
+.results {
+  margin-top: 0.5em;
+  list-style: none;
+  padding: 0;
+}
+
+.suggestions li,
+.results div {
+  padding: 0.25em 0.5em;
+  border-bottom: 1px solid #333;
+}

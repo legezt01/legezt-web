@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Legezt</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="splash" id="splash">
+    <div class="logo">Legezt</div>
+  </div>
+  <div class="container hidden" id="main">
+    <aside class="sidebar">
+      <button data-section="music">🎵</button>
+      <button data-section="video">🎬</button>
+      <button data-section="images">🖼️</button>
+      <button data-section="pdf">📄</button>
+    </aside>
+    <main class="content">
+      <section id="welcome">
+        <h1>Welcome to Legezt</h1>
+        <p>Select an option from the left menu.</p>
+      </section>
+      <section id="music" class="hidden fade">
+        <h2>Legezt Music</h2>
+        <input type="text" id="music-search" placeholder="Search music...">
+        <ul class="suggestions" id="music-suggestions"></ul>
+        <div class="player">Music player goes here.</div>
+      </section>
+      <section id="video" class="hidden fade">
+        <h2>Legezt Video</h2>
+        <input type="text" id="video-search" placeholder="Search videos...">
+        <div class="results" id="video-results"></div>
+        <div class="player">Video player goes here.</div>
+      </section>
+      <section id="images" class="hidden fade">
+        <h2>Legezt Images</h2>
+        <input type="text" id="image-search" placeholder="Search images...">
+        <div class="results" id="image-results"></div>
+      </section>
+      <section id="pdf" class="hidden fade">
+        <h2>Legezt PDF</h2>
+        <input type="file" id="pdf-upload">
+        <div class="results" id="pdf-results"></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
